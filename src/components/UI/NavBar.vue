@@ -12,10 +12,10 @@
           <hr />
         </v-row>
         <v-row class="justify-center" style="margin-top:10px">
-            <v-btn text  to="/" @click="currentSelected = 'home'" :ripple="false">
+            <v-btn text  :to="{name : 'join'}" @click="currentSelected = 'home'" :ripple="false">
               <span :class="navItemClass('home')">Home</span>
             </v-btn>
-            <v-btn text  to="/create"  @click="currentSelected = 'create_room'" :ripple="false">
+            <v-btn text  :to="{name : 'create'}"  @click="currentSelected = 'create_room'" :ripple="false">
               <span :class="navItemClass('create_room')">Create Room</span>
             </v-btn>
         </v-row>

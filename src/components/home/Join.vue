@@ -41,6 +41,7 @@
 
 <script>
 import { mapActions, mapGetters} from 'vuex'
+import RoomResponseState from '../../store/responsestates/room'
 export default {
   data() {
     return {
@@ -58,7 +59,6 @@ export default {
   },
   computed: {
     ...mapGetters({
-      loading: "room/loading",
       state : 'room/state'    
     }),
     isInputValid() {
@@ -75,12 +75,15 @@ export default {
     state(value){
       console.log(value.message)
       if(value.success){
-        this.goToChat(this.roomId);
-      }
-      if(value.error){
-        console.log(value.message);
+        console.log(value.message)
+        if(value.message === RoomResponseState.JOIN_ROOM_SUCCESS){
+          this.goToChat(this.roomId);
+        }
       }
     }
+  },
+  beforeDestroy(){
+    console.log('destory');
   },
   methods : {
     ...mapActions({

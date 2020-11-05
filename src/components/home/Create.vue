@@ -27,6 +27,9 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 export default {
+  beforeDestroy(){
+    console.log('beforedestroy')
+  },
   data() {
     return {
       username: "",
@@ -65,6 +68,7 @@ export default {
       createRoom: "room/createRoom",
     }),
     goToChat(roomId) {
+      console.log(roomId);
       this.$router.push({
         name: "chat",
         params: { roomId },

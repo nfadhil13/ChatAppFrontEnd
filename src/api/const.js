@@ -1,4 +1,4 @@
-const BASE_URL = 'https://chat-app-backend-l6w24.ondigitalocean.app'
+const BASE_URL = 'http://localhost:3000'
 const NEW_MESSAGE_EVENT = 'newchat'
 const NEW_USER_EVENT = 'newuser'
 export {
