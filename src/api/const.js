@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = 'https://fchat-api.nfadhil.me'
 const NEW_MESSAGE_EVENT = 'newchat'
 const NEW_USER_EVENT = 'newuser'
 export {
